@@ -1,0 +1,19 @@
+<template name="export">
+        <div class="export" > 
+                Export id: {{_id}}
+            <div class="progressbar-wrapper">
+                <div progress={{progress}} style="width:{{progress}}%" class="progressbar progress">
+                   
+                {{progress}}%         
+                </div>                          
+
+            </div>              
+            <div class="details">
+                     
+                    {{#if url}} 
+                    <a href={{url}}>{{url}}</a>
+                        <button class="delete">Delete</button>
+                    {{/if}}
+            </div>
+        </div>
+</template>

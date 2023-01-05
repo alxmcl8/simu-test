@@ -1,0 +1,36 @@
+<body>
+    {{> mainContainer }}
+</body>
+
+<template name="mainContainer">
+    <div class="app">
+        <header>
+            <div class="app-bar">
+                <div class="app-header">
+                    <h1> My Fake Export List </h1>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">       
+            {{> form }}
+
+            <div class="exports">
+                {{#each exports}}
+                    {{> export}}
+                {{/each}}
+            </div>
+
+            
+            {{#if isLoading}}
+                <div class="loading">Loading records...</div>
+            {{/if}}
+        </div>
+    </div>
+</template>
+
+<template name="form">
+    <form class="export-form">
+        <button type="submit">Export</button>
+    </form>
+</template>
